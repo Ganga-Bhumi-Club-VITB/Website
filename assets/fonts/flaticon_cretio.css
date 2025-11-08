@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "flaticon_cretio";
-  src: url("./flaticon_cretio.woff2?27d66299e77734b3747271e5f6c74c41") format("woff2"), url("./flaticon_cretio.woff?27d66299e77734b3747271e5f6c74c41") format("woff"), url("./flaticon_cretio.eot?27d66299e77734b3747271e5f6c74c41#iefix") format("embedded-opentype"), url("./flaticon_cretio.ttf?27d66299e77734b3747271e5f6c74c41") format("truetype"), url("./flaticon_cretio.svg?27d66299e77734b3747271e5f6c74c41#flaticon_cretio") format("svg");
+  font-family: "flaticon_Gangabhumi Club";
+  src: url("./flaticon_Gangabhumi Club.woff2?27d66299e77734b3747271e5f6c74c41") format("woff2"), url("./flaticon_Gangabhumi Club.woff?27d66299e77734b3747271e5f6c74c41") format("woff"), url("./flaticon_Gangabhumi Club.eot?27d66299e77734b3747271e5f6c74c41#iefix") format("embedded-opentype"), url("./flaticon_Gangabhumi Club.ttf?27d66299e77734b3747271e5f6c74c41") format("truetype"), url("./flaticon_Gangabhumi Club.svg?27d66299e77734b3747271e5f6c74c41#flaticon_Gangabhumi Club") format("svg");
 }
 i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
-  font-family: flaticon_cretio !important;
+  font-family: flaticon_Gangabhumi Club !important;
   font-style: normal;
   font-weight: normal !important;
   font-variant: normal;
@@ -311,4 +311,4 @@ i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
 
 .flaticon-grid:before {
   content: "\f14b";
-}/*# sourceMappingURL=flaticon_cretio.css.map */
+}/*# sourceMappingURL=flaticon_Gangabhumi Club.css.map */
