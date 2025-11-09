@@ -9282,4 +9282,25 @@ kbd {
     width: 100px;
     height: 100px;
   }
+}
+
+/*--------------------------------------------------------------
+   CUSTOM CLUB STYLES
+----------------------------------------------------------------*/
+/* Force the logo to be bigger in header and footer */
+.ak-site_branding img,
+.footer-logo {
+  max-height: 80px !important;  /* Adjust this value if needed (e.g. 60px, 90px) */
+  width: auto !important;       /* Keeps aspect ratio correct */
+}
+
+/* Ensure Social Icons in footer are visible */
+.ak-footer .social-icon .icon i {
+    color: #ffffff !important;
+}
+.ak-footer .social-icon .icon:hover {
+    background-color: #ffffff !important;
+}
+.ak-footer .social-icon .icon:hover i {
+    color: #ff4a23 !important;
 }/*# sourceMappingURL=style.css.map */
