@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Gangabhumi Club" />
+    <link rel="icon" href="assets/img/logo/logo.png" />
+    <title>Event Gallery | Gangabhumi Club</title>
+    
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body class="dark">
+    <div id="preloader" class="preloader">
+      <div class="txt-loading">
+        <div class="preloader-text">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" class="preloader-text-svg">
+            <text class="svg-text" id="svgText">gbc</text>
+          </svg>
+        </div>
+        <div class="loading-percent">0%</div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="ak-site_header ak-style1 ak-sticky_header">
+      <div class="ak-main_header">
+        <div class="container container-customize">
+          <div class="ak-main_header_in">
+            <div class="ak-main-header-left">
+              <a class="ak-site_branding dark-logo" href="index.html">
+                <img src="assets/img/logo/logo.png" alt="Gangabhumi Club" />
+              </a>
+              <a class="ak-site_branding white-logo" href="index.html">
+                <img src="assets/img/logo/logo.png" alt="Gangabhumi Club" />
+              </a>
+            </div>
+            <div class="ak-main-header-center">
+              <div class="ak-nav ak-medium">
+                <ul class="ak-nav_list">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="event.html">Events</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ak-main-header-right">
+              <div class="ak-space-between gap-3">
+                <div class="btn-wrapper">
+                  <div class="button-container">
+                    <a
+                      href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt"
+                      target="_blank"
+                      class="custom-button ak-center"
+                    >
+                      <svg width="180px" height="50px" viewBox="0 0 180 50">
+                        <rect
+                          x="0"
+                          y="0"
+                          width="180"
+                          height="50"
+                          rx="30"
+                          ry="30"
+                          class="bg-line"
+                        />
+                        <rect
+                          x="0"
+                          y="0"
+                          width="180"
+                          height="50"
+                          rx="30"
+                          ry="30"
+                          class="hl-line"
+                        />
+                      </svg>
+                      <span>Join Us</span>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="offcanvaopen-btn"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                >
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar-border"></div>
+    </header>
+
+    <!-- OFFCANVAS MENU -->
+    <div
+      class="offcanvas offcanvas-end style-1"
+      tabindex="-1"
+      id="offcanvasRight"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close btn-close-black ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="offcanvas-body-coustom-style">
+          <div class="offcanvas-logo-content">
+            <a class="ak-site_branding dark-logo" href="index.html">
+              <img src="assets/img/logo/logo.png" alt="..." />
+            </a>
+            <a class="ak-site_branding white-logo" href="index.html">
+              <img src="assets/img/logo/logo.png" alt="..." />
+            </a>
+          </div>
+          <p class="desp">
+            "Apni Sanskriti, Apna Manch, Apna Gaurav"
+          </p>
+          <div class="offcanvas-footer-contant">
+            <p class="short-title">Get in touch</p>
+            <a class="email" href="mailto:gangabhumiunity@vitbhopal.ac.in">
+              gangabhumiunity@vitbhopal.ac.in
+            </a>
+            <div class="ak-height-25 ak-height-lg-25"></div>
+            <p class="short-title">Social:</p>
+            <div class="social-icon">
+                <a href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt" class="icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              <a href="https://www.instagram.com/gangabhumiclub.vitb" class="icon style-2 dark-mode">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/gangabhumiclubvitb" class="icon style-2 dark-mode">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <div class="ak-height-40 ak-height-lg-40"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE TITLE SECTION -->
+    <section class="gallery-header-section">
+      <div class="container">
+        <h1 class="gallery-page-title">Event Gallery</h1>
+        <p class="gallery-page-subtitle">Relive the magic of our past events through these moments</p>
+      </div>
+    </section>
+
+    <!-- FEATURED SLIDER SECTION -->
+    <section class="featured-slider-section">
+      <div class="container">
+        <div class="swiper featured-event-slider">
+          <!-- 
+             DYNAMIC CONTENT: 
+             The slides are now managed by main.js.
+             The slider wrapper is empty to prevent duplication.
+          -->
+          <div class="swiper-wrapper"></div>
+          
+          <!-- Nav Buttons -->
+          <div class="swiper-button-next featured-next"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="swiper-button-prev featured-prev"><i class="fa-solid fa-chevron-left"></i></div>
+          <div class="swiper-pagination featured-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ak-height-75 ak-height-lg-40"></div>
+
+    <!-- EVENT ALBUMS GRID (DYNAMIC) -->
+    <section class="event-albums-section">
+      <div class="container">
+        <h3 class="section-heading-simple">Event Albums</h3>
+        
+        <!-- Grid populated by JS now -->
+        <div class="album-grid">
+          <!-- JS will inject content here -->
+        </div>
+      </div>
+    </section>
+
+    <div class="ak-height-150 ak-height-lg-80"></div>
+
+    <!-- FOOTER -->
+    <footer
+      class="ak-footer style-1 ak-bg"
+      data-src="assets/img/bg/footer-bg.png"
+    >
+      <div class="ak-height-120 ak-height-lg-50"></div>
+      <img
+        src="assets/img/bg/footer-bgshape.png"
+        class="ak-bg footer-bgshape"
+        alt="bgshape"
+      />
+      <div class="container">
+        <div class="ak-footer-container">
+          <div class="footer-cta">
+            <div class="footer-cta-info">
+              <h1 class="footer-cta-title">Ek Mitti,</h1>
+              <h2 class="footer-cta-title-two"><span>Ek Parivaar</span></h2>
+            </div>
+            <div class="footer-btn-email">
+              <div class="footer-btn-content">
+                <a
+                  href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt"
+                  target="_blank"
+                  class="footer-btn circle-btn-anim"
+                >
+                  <span class="text">
+                    Join
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span>Us</span>
+                  </span>
+                </a>
+              </div>
+              <div class="footer-email">
+                <p class="email-short-title">Say hello!</p>
+                <a href="mailto:gangabhumiunity@vitbhopal.ac.in">
+                  gangabhumiunity@vitbhopal.ac.in</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; gap: 30px;">
+            <div class="about-company">
+              <img
+                class="footer-logo"
+                src="assets/img/logo/logo.png"
+                alt="Gangabhumi Logo"
+              />
+              <p class="about-company-desp">
+                Gangabhumi Club is dedicated to fostering a vibrant community at
+                VIT Bhopal.
+              </p>
+              <div class="social-icon" style="margin-top: 20px;">
+                <a href="mailto:gangabhumiunity@vitbhopal.ac.in" class="icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt" class="icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/gangabhumiclub.vitb" class="icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/gangabhumiclubvitb" class="icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-list-content" style="text-align: left;">
+              <h5 style="color: white; font-size: 1.2rem; font-weight: 500; margin-bottom: 20px; text-transform: uppercase;">Quick Links</h5>
+              <ul class="footer-list-menu" style="display: block; text-align: left; padding-left: 0; list-style: none; margin: 0;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About Us</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-address-content" style="color: white; text-align: left;">
+                 <h5 style="color: white; font-size: 1.2rem; font-weight: 500; margin-bottom: 20px; text-transform: uppercase;">Our Location</h5>
+                 <div style="display: flex; gap: 15px; align-items: start;">
+                    <div class="logo-placeholder" style="width: 150px; height: 60px; display: flex; align-items: center; justify-content: center;"><img src="assets/img/logo/VIT_Logo_white.png" /></div>
+                    <address style="font-style: normal; font-size: 0.95rem; line-height: 1.6; opacity: 0.9; margin-bottom: 0;">
+                        <i class="fa-solid fa-location-dot" style="color: #ff4a23; margin-right: 8px;"></i>
+                        VIT Bhopal University<br>
+                        Bhopal-Indore Highway, Kothri Kalan<br>
+                        Sehore, Madhya Pradesh - 466114
+                    </address>
+                 </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="ak-height-95 ak-height-lg-50"></div>
+      <div class="copy-right-content">
+        <div class="container">
+          <div class="ak-space-between">
+          <div class="ak-space-between">
+            <!-- Social Icons Removed From Here -->
+            <a href="#" class="copy-right-text"
+              >© 2025 <span>Gangabhumi Club.</span> All rights reserved.</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCROLL UP -->
+    <span class="ak-scrollup">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+
+    <!-- Lightbox HTML (Modified for Album Slider) -->
+    <div class="ak-image-popup">
+        <div class="ak-image-popup-overlay"></div>
+        <div class="ak-image-popup-content style-album">
+            <!-- Content injected by JS -->
+        </div>
+    </div>
+
+
+    <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+
+    <script src="assets/js/plugins/gsap.js"></script>
+    <script src="assets/js/plugins/lenis.min.js"></script>
+    <script src="assets/js/plugins/splittext.js"></script>
+    <script src="assets/js/plugins/scrolltigger.js"></script>
+    <script src="assets/js/plugins/scrolltoplugins.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

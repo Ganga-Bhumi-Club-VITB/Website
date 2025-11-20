@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Gangabhumi Club" />
+    <link rel="icon" href="assets/img/logo/logo.png" />
+    <title>Home | Gangabhumi Club - VIT Bhopal</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fonts/flaticon_cretio.css"
+    />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Added styles for hero section override -->
+    <style>
+      .digital-agencye-hero .title-box .title .digital,
+      .digital-agencye-hero .title-box .title .agency {
+        font-size: clamp(3rem, 10vw, 7rem) !important; /* Unified font size */
+        line-height: 1.1 !important;
+        display: inline-block; /* Ensure they stay on the same line well */
+      }
+      .digital-agencye-hero .title-box .title .digital {
+         /* Keeps default color */
+      }
+      .digital-agencye-hero .title-box .title .agency {
+        color: var(--primary-color); /* Keeps accent color */
+      }
+
+      /* --- MODIFICATIONS START --- */
+
+      /* MODIFICATION: Make hero section full height and center content */
+      #home-hero-section {
+        position: relative;
+        z-index: 1;
+        background-image: none !important; /* Force remove BG from main element */
+        overflow: hidden; /* Ensure ::before doesn't leak */
+        
+        /* New styles for vertical centering */
+        min-height: 100vh;
+        display: flex;
+        align-items: center; /* Vertically center */
+        justify-content: center; /* Horizontally center */
+        padding-top: 100px; /* Add some padding to account for header */
+        padding-bottom: 50px;
+      }
+
+      /* MODIFICATION: Apply dark background to ::before pseudo-element */
+      #home-hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Make sure this path is correct on your server */
+        background-image: url('assets/img/bg/ram_mandir.webp'); 
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3; /* Darkened - adjust 0.1 (10%) as needed */
+        filter: brightness(0.7); /* Darkened - adjust 0.3 (30%) as needed */
+        z-index: -1;
+      }
+
+      /* MODIFICATION: Remove top margin from hero title */
+      .digital-agencye-hero .title-box .title {
+        margin-top: 0 !important;
+      }
+
+      /* --- NEW NAVBAR STYLES START ---
+
+      /* 4. Adjust hero padding to account for the fixed header height */
+      #home-hero-section {
+        padding-top: 150px; /* Make sure content starts below the header */
+      }
+
+      /* --- NEW NAVBAR STYLES END --- */
+
+      /* --- MODIFICATIONS END --- */
+
+      /* <!-- NEW: Styles for the dynamic event grid --> */
+      .dynamic-events-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px; /* Adjust gap as needed */
+        width: 100%;
+        margin-top: 30px; /* Space below the title */
+      }
+
+      @media (min-width: 992px) {
+        .dynamic-events-grid {
+          /* On desktop, you might want a fixed 3-column grid */
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .dynamic-events-grid {
+          /* On mobile, stack them */
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+        .portfolio-card.style-1 {
+          /* Ensure mobile cards look good */
+          height: 400px; 
+          width: 100%;
+        }
+      }
+      
+      /* --- NEW STYLES FOR RECRUITMENT CARD --- */
+      .dynamic-events-grid.recruitment-mode {
+        /* Override the 3-column grid to be 1 column */
+        grid-template-columns: 1fr; 
+        /* Constrain the width so it doesn't get too wide */
+        max-width: 700px; 
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .dynamic-events-grid.recruitment-mode .portfolio-card.style-1 {
+         /* Make the card taller on desktop */
+         height: 500px; 
+         width: 100%; /* <-- ADD THIS LINE */
+      }
+      /* --- END NEW STYLES --- */
+
+      /* --- NEW: Add tilt to flat hover images --- */
+      .service-content .service-hover-img {
+        /* Apply a permanent tilt. The JS will handle scaling and opacity! */
+        transform: rotate(13deg); 
+        /* Adjust transform origin to make it feel right */
+        transform-origin: center center; 
+        /* Optional: Add a subtle border/shadow to make it pop */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        /* border: 3px solid white; */
+        border-radius: 5px;
+        /* Ensure the image doesn't get too large */
+        max-width: 350px; 
+      }
+      /* --- END NEW STYLES --- */
+      
+      /* <!-- END NEW STYLES --> */
+
+    </style>
+  </head>
+
+  <body class="dark">
+    <div id="preloader" class="preloader">
+      <div class="txt-loading">
+        <div class="preloader-text">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 800 300"
+            class="preloader-text-svg"
+          >
+            <defs>
+              <linearGradient
+                id="textGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop offset="0%" stop-color="#000" />
+                <stop offset="50%" stop-color="#000" />
+                <stop offset="100%" stop-color="#000" />
+              </linearGradient>
+            </defs>
+            <text class="svg-text" id="svgText">gbc</text>
+          </svg>
+        </div>
+        <div class="loading-percent">0%</div>
+      </div>
+    </div>
+    <!-- MODIFICATION: Restored the header -->
+    <header class="ak-site_header ak-style1 ak-sticky_header">
+      <div class="ak-main_header">
+        <div class="container container-customize">
+          <div class="ak-main_header_in">
+            <div class="ak-main-header-left">
+              <a class="ak-site_branding dark-logo" href="index.html">
+                <img src="assets/img/logo/logo.png" alt="Gangabhumi Club" />
+              </a>
+              <a class="ak-site_branding white-logo" href="index.html">
+                <img src="assets/img/logo/logo.png" alt="Gangabhumi Club" />
+              </a>
+            </div>
+            <div class="ak-main-header-center">
+              <div class="ak-nav ak-medium">
+                <ul class="ak-nav_list">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="event.html">Events</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="ak-main-header-right">
+              <div class="ak-space-between gap-3">
+                <div class="btn-wrapper">
+                  <div class="button-container">
+                    <a
+                      href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt"
+                      target="_blank"
+                      class="custom-button ak-center"
+                    >
+                      <svg width="180px" height="50px" viewBox="0 0 180 50">
+                        <rect
+                          x="0"
+                          y="0"
+                          width="180"
+                          height="50"
+                          rx="30"
+                          ry="30"
+                          class="bg-line"
+                        />
+                        <rect
+                          x="0"
+                          y="0"
+                          width="180"
+                          height="50"
+                          rx="30"
+                          ry="30"
+                          class="hl-line"
+                        />
+                      </svg>
+                      <span>Join Us</span>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="offcanvaopen-btn"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight"
+                >
+                  <i class="fa-solid fa-bars"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-bar-border"></div>
+    </header>
+
+    <!-- OFFCANVAS MENU -->
+    <div
+      class="offcanvas offcanvas-end style-1"
+      tabindex="-1"
+      id="offcanvasRight"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close btn-close-black ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="offcanvas-body-coustom-style">
+          <div class="offcanvas-logo-content">
+            <a class="ak-site_branding dark-logo" href="index.html">
+              <img src="assets/img/logo/logo.png" alt="..." />
+            </a>
+            <a class="ak-site_branding white-logo" href="index.html">
+              <img src="assets/img/logo/logo.png" alt="..." />
+            </a>
+          </div>
+          <p class="desp">
+            "Apni Sanskriti, Apna Manch, Apna Gaurav"
+          </p>
+          <div class="offcanvas-footer-contant">
+            <p class="short-title">Get in touch</p>
+            <a class="email" href="mailto:gangabhumiunity@vitbhopal.ac.in">
+              gangabhumiunity@vitbhopal.ac.in
+            </a>
+            <div class="ak-height-25 ak-height-lg-25"></div>
+            <p class="short-title">Social:</p>
+            <div class="social-icon">
+                <a href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt" class="icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+              <a href="https://www.instagram.com/gangabhumiclub.vitb" class="icon style-2 dark-mode">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/gangabhumiclubvitb" class="icon style-2 dark-mode">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <div class="ak-height-40 ak-height-lg-40"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODIFICATION: Removing this large spacer div -->
+    <!-- <div class="ak-height-190 ak-height-lg-80"></div> -->
+    <!-- 
+      MODIFICATION: Added id="home-hero-section" to this tag.
+    -->
+    <section class="container container-customize" id="home-hero-section">
+      <!-- 
+        MODIFICATION 1: 
+        - Removed 'style-1' class from hero container
+        - Removed 'hero-right-column' div entirely
+        - Centered 'hero-left-column' and its contents
+        - Moved 'cta-box' (description & button) inside 'title-box'
+        - Simplified and centered the H2 title
+      -->
+      <div class="digital-agencye-hero">
+        <div class="hero-left-column" style="width: 100%">
+          <div
+            class="title-box"
+            style="
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <h2 class="title" style="text-align: center">
+              <span class="digital">GANGA BHUMI</span>
+              <span class="agency">CLUB</span>
+            </h2>
+
+            <div
+              class="cta-box"
+              style="
+                margin-bottom: 25px;
+                max-width: 700px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+              "
+            >
+              <p class="description" style="margin: 0">
+                <strong style="color: var(--primary-color)"
+                  >"Apni Sanskriti, Apna Manch, Apna Gaurav"</strong
+                ><br />
+                Ganga Bhumi Club is not just a student society; it’s a feeling of
+                home away from home. We bring together the rich culture of UP,
+                Bihar, and Jharkhand, blending it with the vibrancy of campus
+                life.
+              </p>
+              <!-- REMOVED 'hero-btn' div -->
+              <!-- ADDED new 'hero-stats-container' div -->
+              <div class="hero-stats-container" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; width: 100%; margin: 20px 0 30px 0;">
+          
+                <div class="funfact style1">
+                  <div class="funfact-card style-1 type-3" style="width: 200px; height: 200px; border: 1px solid var(--border-color); border-radius: 50%; padding: 40px 20px; display: flex; flex-direction: column; justify-content: center;">
+                    <div class="funfact-number hero-counter" data-goal="3" style="color: #ff4a23; font-size: 3rem; line-height: 1.2; margin-top: 0;">0+</div>
+                    <p class="funfact-text" style="font-size: 1rem; margin-top: 10px;">Events Hosted</p>
+                  </div>
+                </div>
+      
+                <div class="funfact style1">
+                  <div class="funfact-card style-1 type-3" style="width: 200px; height: 200px; border: 1px solid var(--border-color); border-radius: 50%; padding: 40px 20px; display: flex; flex-direction: column; justify-content: center;">
+                    <div class="funfact-number hero-counter" data-goal="100" style="color: #ff4a23; font-size: 3rem; line-height: 1.2; margin-top: 0;">0+</div>
+                    <p class="funfact-text" style="font-size: 1rem; margin-top: 10px;">Core Members</p>
+                  </div>
+                </div>
+      
+                <div class="funfact style1">
+                  <div class="funfact-card style-1 type-3" style="width: 200px; height: 200px; border: 1px solid var(--border-color); border-radius: 50%; padding: 40px 20px; display: flex; flex-direction: column; justify-content: center;">
+                    <div class="funfact-number hero-counter" data-goal="800" style="color: #ff4a23; font-size: 3rem; line-height: 1.2; margin-top: 0;">0+</div>
+                    <p class="funfact-text" style="font-size: 1rem; margin-top: 10px;">Active Community</p>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+
+          <div class="partners-section">
+            <h6 class="partners-title"></h6>
+            <!-- 
+              MODIFICATION 2:
+              - Removed the 'ak-slider', 'partners-logos-slider', 'swiper-wrapper', and 'swiper-slide' divs
+              - Placed icons inside a simple flex div within the marquee
+              - Duplicated the icons to ensure a smooth, repeating loop
+            -->
+            <marquee behavior="scroll" direction="left" scrollamount="15">
+              <div style="display: flex; align-items: center; gap: 100px; padding: 0 50px;">
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-om"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <span style="font-size: 50px; color: var(--primary-color); line-height: 1;">
+                    卐
+                  </span>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-gopuram"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-fire"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-staff-snake"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <!-- Duplicated items for seamless loop -->
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-om"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <span style="font-size: 50px; color: var(--primary-color); line-height: 1;">
+                    卐
+                  </span>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-gopuram"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-fire"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-staff-snake"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <!-- Duplicated items again -->
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-om"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <span style="font-size: 50px; color: var(--primary-color); line-height: 1;">
+                    卐
+                  </span>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-gopuram"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-fire"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+                <div class="client-logo style2">
+                  <i
+                    class="fa-solid fa-staff-snake"
+                    style="font-size: 50px; color: var(--primary-color)"
+                  ></i>
+                </div>
+              </div>
+            </marquee>
+          </div>
+        </div>
+        <!-- Removed the 'hero-right-column' div that contained the video -->
+      </div>
+    </section>
+    <div class="ak-height-95 ak-height-lg-80"></div>
+    <section class="about-content container">
+      <div class="star-content">
+        <img src="assets/img/shape/star-2.png" alt="star" class="star-1" />
+        <img src="assets/img/shape/star-2.png" alt="star" class="star-2" />
+      </div>
+      <div class="about-info">
+        <h3 class="about-title text-color-shiption">
+          <span style="font-size: 24px; display: block; margin-bottom: 10px; color: #fff; font-style: italic;">"Virasat Se Vishwas Tak"</span>
+          Built on the belief of
+          <span class="highlight"
+            >"Apno Ka Saath, Apnapan Ka Ehsaas"</span
+          >. We keep the essence of our soil alive, from celebrating
+          <span class="highlight">Chhath & Holi</span> to fostering bonds that
+          last a lifetime.
+        </h3>
+
+        <div class="fade-animation">
+          <a href="about.html" class="more-btn">
+            <span class="morebtn-text"> More About Us </span>
+            <span class="primary-icon-anim">
+              <i class="fa-solid fa-arrow-right"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+        </div>
+
+        <img
+          src="assets/img/shape/line-2.png"
+          alt="swirl design"
+          class="swirl"
+        />
+      </div>
+    </section>
+    <div class="ak-height-150 ak-height-lg-80"></div>
+    <section class="service-bg">
+      <div class="container">
+        <div class="ak-height-150 ak-height-lg-80"></div>
+        <div class="service-content">
+          <div class="ak-section-heading ak-style-1">
+            <div class="ak-section-left">
+              <h2
+                class="ak-section-title text-animation"
+                data-ease="power2.out"
+                data-split-text="chars"
+                data-duration="0.7"
+                data-direction="textTop"
+                data-offset="100%"
+              >
+                Our <span class="highlight">Club</span>
+                Activities & <span class="highlight">Events</span>
+              </h2>
+            </div>
+            <!-- 
+              MODIFICATION: Removed the entire ak-section-right div below, 
+              which contained the "Join us..." and "What We Do" text.
+            -->
+          </div>
+          <div class="service-card fade-animation" data-direction="bottom">
+            <a href="gallery.html">
+              <img
+                class="service-hover-img"
+                src="assets\img\events\ramnavmi4.png"
+                alt="Ram Navami Celebration"
+              />
+            </a>
+            <div class="service-card-item style-1">
+              <div class="service-left-info">
+                <h4 class="service-title">Ram Navami & Gudi Padwa</h4>
+                <ul class="service-lists">
+                  <li class="service-list">
+                    <span><i class="fa-solid fa-star" style="color: #ff4a23;"></i></span>
+                    <span> Idol Sthapana & Bhajans </span>
+                  </li>
+                  <li class="service-list">
+                    <span><i class="fa-solid fa-star" style="color: #ff4a23;"></i></span>
+                    <span> Ramayana Skits & Fusion </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-left-right">
+                <p class="service-desp">
+                  A grand unison with the Marathi Club, celebrating shared heritage.
+                </p>
+                <div class="service-btn-content">
+                  <a href="gallery.html" class="more-btn">
+                    <span class="morebtn-text"> View More </span>
+                    <span class="primary-icon-anim">
+                      <i class="fa-solid fa-arrow-right"></i>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="service-stroke-number ak-stroke-number">01</div>
+          </div>
+          <div class="service-card fade-animation" data-direction="bottom">
+            <a href="gallery.html">
+              <img
+                class="service-hover-img"
+                src="assets\img\events\sangam2.jpg"
+                alt="Sangam 2025"
+              />
+            </a>
+            <div class="service-card-item style-1">
+              <div class="service-left-info">
+                <h4 class="service-title">Sangam 2025</h4>
+                <ul class="service-lists">
+                  <li class="service-list">
+                    <span><i class="fa-solid fa-star" style="color: #ff4a23;"></i></span>
+                    <span> Iconic Chhath Puja Skit </span>
+                  </li>
+                  <li class="service-list">
+                    <span><i class="fa-solid fa-star" style="color: #ff4a23;"></i></span>
+                    <span> Ganga Aarti & Live Performances </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-left-right">
+                <p class="service-desp">
+                  A day-long celebration of tradition and festive cheer at Advitya.
+                </p>
+                <div class="service-btn-content">
+                  <a href="gallery.html" class="more-btn">
+                    <span class="morebtn-text"> View More </span>
+                    <span class="primary-icon-anim">
+                      <i class="fa-solid fa-arrow-right"></i>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="service-stroke-number ak-stroke-number">02</div>
+          </div>
+          <div class="service-card fade-animation" data-direction="bottom">
+            <a href="gallery.html">
+              <img
+                class="service-hover-img"
+                src="assets\img\events\winterfest1.jpg"
+                alt="Winter Fest Debut"
+              />
+            </a>
+            <div class="service-card-item style-1">
+              <div class="service-left-info">
+                <h4 class="service-title">Winter Fest Debut</h4>
+                <ul class="service-lists">
+                  <li class="service-list">
+                    <span><i class="fa-solid fa-star" style="color: #ff4a23;"></i></span>
+                    <span> Dynamic Folk Dances </span>
+                  </li>
+                  <li class="service-list">
+                    <span><i class="fa-solid fa-star" style="color: #ff4a23;"></i></span>
+                    <span> Cultural Ramp Walk & Flute </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-left-right">
+                <p class="service-desp">
+                  Our vibrant and unforgettable inaugural stage performance at VIT Bhopal.
+                </p>
+                <div class="service-btn-content">
+                  <a href="gallery.html" class="more-btn">
+                    <span class="morebtn-text"> View More </span>
+                    <span class="primary-icon-anim">
+                      <i class="fa-solid fa-arrow-right"></i>
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="service-stroke-number ak-stroke-number">03</div>
+          </div>
+        </div>
+        <div class="ak-height-150 ak-height-lg-80"></div>
+      </div>
+    </section>
+    <div class="ak-height-150 ak-height-lg-80"></div>
+    <section class="core-features-area">
+      <div class="container">
+        <div class="core-features slider-two swiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="core-feature-card">
+                <div class="icon">
+                  <i class="fa-solid fa-praying-hands" style="font-size: 40px; color: #ff4a23"></i>
+                </div>
+                <h6 class="core-feature-title">संस्कार (Values)</h6>
+                <p class="core-feature-desp">
+                  Honoring our rich cultural and ethical roots.
+                </p>
+                <p class="core-feature-number">01</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="core-feature-card">
+                <div class="icon">
+                  <i class="fa-solid fa-handshake" style="font-size: 40px; color: #ff4a23"></i>
+                </div>
+                <h6 class="core-feature-title">सहयोग (Collaboration)</h6>
+                <p class="core-feature-desp">
+                  Fostering mutual support and mentorship.
+                </p>
+                <p class="core-feature-number">02</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="core-feature-card">
+                <div class="icon">
+                  <i class="fa-solid fa-seedling" style="font-size: 40px; color: #ff4a23"></i>
+                </div>
+                <h6 class="core-feature-title">समृद्धि (Prosperity)</h6>
+                <p class="core-feature-desp">
+                  Working towards holistic growth for all members.
+                </p>
+                <p class="core-feature-number">03</p>
+              </div>
+            </div>
+
+            <!-- DUPLICATE CARDS (For smooth infinite loop on Desktop) -->
+            <!-- Card 1 Duplicate -->
+            <div class="swiper-slide">
+              <div class="core-feature-card">
+                <div class="icon">
+                  <i class="fa-solid fa-praying-hands" style="font-size: 40px; color: #ff4a23"></i>
+                </div>
+                <h6 class="core-feature-title">संस्कार (Values)</h6>
+                <p class="core-feature-desp">
+                  Honoring our rich cultural and ethical roots.
+                </p>
+                <p class="core-feature-number">01</p>
+              </div>
+            </div>
+
+            <!-- Card 2 Duplicate -->
+            <div class="swiper-slide">
+              <div class="core-feature-card">
+                <div class="icon">
+                  <i class="fa-solid fa-handshake" style="font-size: 40px; color: #ff4a23"></i>
+                </div>
+                <h6 class="core-feature-title">सहयोग (Collaboration)</h6>
+                <p class="core-feature-desp">
+                  Fostering mutual support and mentorship.
+                </p>
+                <p class="core-feature-number">02</p>
+              </div>
+            </div>
+
+            <!-- Card 3 Duplicate -->
+            <div class="swiper-slide">
+              <div class="core-feature-card">
+                <div class="icon">
+                  <i class="fa-solid fa-seedling" style="font-size: 40px; color: #ff4a23"></i>
+                </div>
+                <h6 class="core-feature-title">समृद्धि (Prosperity)</h6>
+                <p class="core-feature-desp">
+                  Working towards holistic growth for all members.
+                </p>
+                <p class="core-feature-number">03</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- Optional Pagination if needed by JS, usually hidden for marquee -->
+          <div class="core-features-swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <div class="ak-height-150 ak-height-lg-80"></div>
+    <section class="container">
+      <div class="portfolio-content">
+        <!-- <!-- MODIFIED: Changed from flex-column-reverse to flex-column -->
+        <div class="d-flex flex-lg-column flex-column">
+          
+          <!-- <!-- MODIFIED: Title moved before the grid -->
+          <h2 class="portfolio-title-content">
+            Latest <span class="highlight">News</span>
+            <br />
+            <span class="highlight style-2">Updates</span>
+          </h2>
+          <div class="ak-height-lg-80"></div>
+
+          <!-- <!-- MODIFIED: This is the new container that will be filled by main.js -->
+          <div id="dynamic-events-container" class="dynamic-events-grid">
+             <!-- Events will be dynamically injected here by main.js -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="ak-height-150 ak-height-lg-80"></div>
+    <div class="container">
+      <div class="funfact-content" style="justify-content: center; gap: 20px">
+        <div class="funfact style1">
+          <div class="funfact-card style-1 type-3">
+            <div class="funfact-number" style="color: #ff4a23; font-size: 2.5rem; line-height: 1.3">
+              Community<br> & <br>Collaboration
+            </div>
+            <p class="funfact-text">Where diverse minds Connect and create.</p>
+          </div>
+        </div>
+        <div class="funfact style1">
+          <div class="funfact-card style-1 type-3">
+            <div class="funfact-number" style="color: #ff4a23; font-size: 2.5rem; line-height: 1.3">
+              Innovation <br> & <br> Creativity
+            </div>
+            <p class="funfact-text">Bringing fresh ideas to life.</p>
+          </div>
+        </div>
+        <div class="funfact style1">
+          <div class="funfact-card style-1 type-3">
+            <div class="funfact-number" style="color: #ff4a23; font-size: 2.5rem; line-height: 1.3">
+              Passion <br> & <br> Growth
+            </div>
+            <p class="funfact-text">A place to learn, lead, and grow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ak-height-150 ak-height-lg-80"></div>
+    <section>
+      <div class="container">
+        <div class="ak-section-heading ak-style-1">
+          <div class="ak-section-left">
+            <h2
+              class="ak-section-title text-animation"
+              data-ease="power2.out"
+              data-split-text="chars"
+              data-direction="textTop"
+              data-duration="0.7"
+              data-offset="100%"
+            >
+              <!-- MODIFICATION: Title changed -->
+              Meet Our <span class="highlight">Founders</span>
+            </h2>
+          </div>
+          <!-- 
+            MODIFICATION: Removed the entire ak-section-right div below, 
+            which contained the "The dedicated students..." and "Leadership" text.
+          -->
+        </div>
+      </div>
+      <div class="ak-height-75 ak-height-lg-50"></div>
+      <!-- MODIFICATION: Removed marquee and replaced with new static grid -->
+      <div class="founder-card-grid container" style="max-width: 900px;">
+        
+        <!-- Founder Card 1: Faculty Coordinator -->
+        <!-- Use data-modal-target="#faculty-modal" to link this card to its modal -->
+        <div class="founder-card" data-modal-target="#faculty-modal">
+          <div class="founder-card-img">
+            <!-- TODO: Add Faculty Coordinator image URL here -->
+            <img src="assets\img\Faculty\faculty_coordinator.jpg" alt="Faculty Coordinator">
+          </div>
+          <div class="founder-card-info">
+            <!-- TODO: Add Faculty Coordinator name here -->
+            <h4 class="founder-card-name">Dr. Faculty Coordinator</h4>
+            <!-- TODO: Add Faculty Coordinator role here -->
+            <p class="founder-card-role">Faculty Coordinator</p>
+          </div>
+        </div>
+      
+        <!-- Founder Card 2: Founder -->
+        <!-- Use data-modal-target="#founder-modal" to link this card to its modal -->
+        <div class="founder-card" data-modal-target="#founder-modal">
+          <div class="founder-card-img">
+            <!-- TODO: Add Founder image URL here -->
+            <img src="assets/img/team/board/20241214_143908 - Vishal Kumar 23mim10133.jpg" alt="Founder">
+          </div>
+          <div class="founder-card-info">
+            <!-- TODO: Add Founder name here -->
+            <h4 class="founder-card-name">Vishal Kumar</h4>
+            <!-- TODO: Add Founder role here -->
+            <p class="founder-card-role">Founder</p>
+          </div>
+        </div>
+      
+      </div>
+      <!-- END MODIFICATION -->
+    </section>
+    <div class="ak-height-150 ak-height-lg-80"></div>
+    <div class="text-moving-container style2">
+      <div class="text-moving-bg"></div>
+      <div class="text-moving-info">
+        <span class="text-moving style2">
+          Ka Haal Ba? • Johar • Aahan Ke Swagat Chi • Pranam •
+        </span>
+        <span class="text-moving style2">
+          Ka Haal Ba? • Johar • Aahan Ke Swagat Chi • Pranam •
+        </span>
+      </div>
+    </div>
+    <div class="ak-height-150 ak-height-lg-80"></div>
+    <footer
+      class="ak-footer style-1 ak-bg"
+      data-src="assets/img/bg/footer-bg.png"
+    >
+      <div class="ak-height-120 ak-height-lg-50"></div>
+      <img
+        src="assets/img/bg/footer-bgshape.png"
+        class="ak-bg footer-bgshape"
+        alt="bgshape"
+      />
+      <div class="container">
+        <div class="ak-footer-container">
+          <div class="footer-cta">
+            <div class="footer-cta-info">
+              <h1 class="footer-cta-title">Ek Mitti,</h1>
+              <h2 class="footer-cta-title-two"><span>Ek Parivaar</span></h2>
+            </div>
+            <div class="footer-btn-email">
+              <div class="footer-btn-content">
+                <a
+                  href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt"
+                  target="_blank"
+                  class="footer-btn circle-btn-anim"
+                >
+                  <span class="text">
+                    Join
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <span>Us</span>
+                  </span>
+                </a>
+              </div>
+              <div class="footer-email">
+                <p class="email-short-title">Say hello!</p>
+                <a href="mailto:gangabhumiunity@vitbhopal.ac.in">
+                  gangabhumiunity@vitbhopal.ac.in</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; gap: 30px;">
+            <div class="about-company">
+              <img
+                class="footer-logo"
+                src="assets/img/logo/logo.png"
+                alt="Gangabhumi Logo"
+              />
+              <p class="about-company-desp">
+                Gangabhumi Club is dedicated to fostering a vibrant community at
+                VIT Bhopal.
+              </p>
+              <!-- Social Icons Moved Here -->
+              <div class="social-icon" style="margin-top: 20px;">
+                <a href="mailto:gangabhumiunity@vitbhopal.ac.in" class="icon">
+                  <i class="fa-solid fa-envelope"></i> <!-- Mail Icon -->
+                </a>
+                <a href="https://chat.whatsapp.com/DqlOENKYJnT9Aj80ARGVCn?mode=wwt" class="icon">
+                  <i class="fa-brands fa-whatsapp"></i> <!-- WhatsApp Icon -->
+                </a>
+                <a href="https://www.instagram.com/gangabhumiclub.vitb" class="icon">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/gangabhumiclubvitb" class="icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-list-content" style="text-align: left;">
+              <h5 style="color: white; font-size: 1.2rem; font-weight: 500; margin-bottom: 20px; text-transform: uppercase;">Quick Links</h5>
+              <ul class="footer-list-menu" style="display: block; text-align: left; padding-left: 0; list-style: none; margin: 0;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="about.html">About Us</a></li>
+              </ul>
+            </div>
+            
+            <!-- New Address Block -->
+            <div class="footer-address-content" style="color: white; text-align: left;">
+                 <h5 style="color: white; font-size: 1.2rem; font-weight: 500; margin-bottom: 20px; text-transform: uppercase;">Our Location</h5>
+                 <div style="display: flex; gap: 15px; align-items: start;">
+                    <!-- Placeholder for logo -->
+                    <div class="logo-placeholder" style="width: 150px; height: 60px; display: flex; align-items: center; justify-content: center;"><img src="assets\img\logo\VIT_Logo_white.png" /></div>
+                    <address style="font-style: normal; font-size: 0.95rem; line-height: 1.6; opacity: 0.9; margin-bottom: 0;">
+                        <i class="fa-solid fa-location-dot" style="color: #ff4a23; margin-right: 8px;"></i>
+                        VIT Bhopal University<br>
+                        Bhopal-Indore Highway, Kothri Kalan<br>
+                        Sehore, Madhya Pradesh - 466114
+                    </address>
+                 </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="ak-height-95 ak-height-lg-50"></div>
+      <div class="copy-right-content">
+        <div class="container">
+          <div class="ak-space-between">
+            <!-- Social Icons Removed From Here -->
+            <a href="#" class="copy-right-text"
+              >© 2025 <span>Gangabhumi Club.</span> All rights reserved.</a
+            >
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+    <!-- <div class="mode-toggle">
+      <div class="setting-mode">
+        <button id="open">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button id="clecel">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <div class="mode-btn js-mode-type">
+        <button data-mode="light" class="mode-light">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button data-mode="dark" class="active mode-dark">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div> -->
+
+    <span class="ak-scrollup">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 10L1.7625 11.7625L8.75 4.7875V20H11.25V4.7875L18.225 11.775L20 10L10 0L0 10Z"
+          fill="currentColor"
+        />
+      </svg>
+    </span>
+
+    <div class="ak-video-popup">
+      <div class="ak-video-popup-overlay"></div>
+      <div class="ak-video-popup-content">
+        <div class="ak-video-popup-layer"></div>
+        <div class="ak-video-popup-container">
+          <div class_name="ak-video-popup-align">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="about:blank"></iframe>
+            </div>
+          </div>
+          <div class="ak-video-popup-close"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- START: NEW FOUNDER MODALS -->
+    <!-- This is the overlay for the new modals -->
+    <div class="founder-modal-overlay"></div>
+
+    <!-- Modal 1: Faculty Coordinator -->
+    <!-- This 'id' MUST match the 'data-modal-target' from the card -->
+    <div class="founder-modal" id="faculty-modal" data-lenis-prevent>
+      <button class="founder-modal-close">&times;</button>
+      <div class="founder-modal-content">
+        <div class="founder-modal-img">
+          <!-- TODO: Add Faculty Coordinator image URL here -->
+          <img src="assets\img\Faculty\faculty_coordinator.jpg" alt="Faculty Coordinator">
+        </div>
+        <div class="founder-modal-info">
+          <!-- TODO: Add Faculty Coordinator name here -->
+          <h3 class="founder-modal-name">Dr. Pratosh Kumar Pal</h3>
+          <!-- TODO: Add Faculty Coordinator role here -->
+          <p class="founder-modal-role">Faculty Coordinator</p>
+          <hr class="founder-modal-divider">
+          <!-- TODO: Add Faculty Coordinator "About" text here -->
+          <p class="founder-modal-about">
+            Dr. Pratosh Kumar Pal has completed his Ph.D. from MNNIT Allahabad, Prayagraj and M.Tech. from ABV-IIITM Gwalior in the years 2019 and 2015 respectively. He has four years of teaching and research experience at institutes of national importance. He has published 17 research papers in international journals, conferences, and springer book chapters. He is a reputed and recognized reviewer of several international journals like JCSC, Circuit World, IJNM-ENDF, AEEE etc. Dr. Pratosh is the member of various professional bodies like ISTE (Life Member), IEEE, IAENG, IFERP (Professional Member). His research area and interests include VLSI Circuit Design for low voltage and low power applications, Machine Learning, and embedded systems etc.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Founder -->
+    <!-- This 'id' MUST match the 'data-modal-target' from the card -->
+    <div class="founder-modal" id="founder-modal" data-lenis-prevent>
+      <button class="founder-modal-close">&times;</button>
+      <div class="founder-modal-content">
+        <div class="founder-modal-img">
+          <!-- TODO: Add Founder image URL here -->
+          <img src="assets/img/team/board/20241214_143908 - Vishal Kumar 23mim10133.jpg" alt="Founder">
+        </div>
+        <div class="founder-modal-info">
+          <!-- TODO: Add Founder name here -->
+          <h3 class="founder-modal-name">Vishal Kumar</h3>
+          <!-- TODO: Add Founder role here -->
+          <p class="founder-modal-role">Founder</p>
+          <hr class="founder-modal-divider">
+          <!-- TODO: Add Founder "About" text here -->
+          <p class="founder-modal-about">
+            Ganga Bhumi was born in 2024 after months of determination, challenges, and a clear vision—to create a true home on campus for the cultures of Uttar Pradesh, Bihar, and Jharkhand. What started as a simple idea has grown into a powerful cultural movement built on unity, pride, and belonging.
+
+Leading this journey has taught me resilience, collaboration, and the art of bringing a shared vision to life. From our energetic Winter Fest debut to the traditional grace of Sangam, the Chhath Puja skit, and the divine Ram Navami celebrations, every event has reinforced the strength of our community.
+
+When passion meets purpose, you create more than a club—you build a family. Ganga Bhumi today is a space where heritage connects with aspiration, and this is only the beginning of a legacy meant to inspire many more to come.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- END: NEW FOUNDER MODALS -->
+
+
+
+
+    <script src="assets/js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/gsap.js"></script>
+    <script src="assets/js/plugins/lenis.min.js"></script>
+    <script src="assets/js/plugins/splittext.js"></script>
+    <script src="assets/js/plugins/scrolltigger.js"></script>
+    <script src="assets/js/plugins/scrolltoplugins.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
