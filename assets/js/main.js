@@ -3078,7 +3078,7 @@
         },
         {
           name: "Prateek Mishra",
-          role: "Coordinator",
+          role: "Core Member",
           img: "assets/img/team/cultural/prateek_24BCY10072 - PRATEEK MISHRA 24BCY10072.jpeg",
           links: {
             linkedin: "https://www.linkedin.com/in/prateek-mishra-b41a87324",
@@ -3087,7 +3087,7 @@
         },
         {
           name: "Shlok Sagar",
-          role: "Coordinator",
+          role: "Core Member",
           img: "assets/img/team/cultural/Shlok_25BAI10567 - SHLOK SAGAR 25BAI10567.jpg",
           links: {
             linkedin: "#",
@@ -3904,3 +3904,4 @@
 
 
 })(jQuery);
+
