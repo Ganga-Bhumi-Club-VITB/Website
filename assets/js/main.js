@@ -2331,7 +2331,7 @@
           role: "Lead",
           img: "assets/img/team/tech/Himalaya_23MEI10069 - HIMALAYA YADAV 23MEI10069.jpg",
           links: {
-            linkedin: "#",
+            linkedin: "http://www.linkedin.com/in/himalayaydv",
             instagram: "#",
           },
         },
@@ -3904,4 +3904,5 @@
 
 
 })(jQuery);
+
 
