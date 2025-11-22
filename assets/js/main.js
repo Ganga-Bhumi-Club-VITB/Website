@@ -3644,7 +3644,7 @@
                 • <b>📅 Date:</b> 4th December 2025<br>
                 • <b>⏰ Time:</b> 1:20 PM - 4:20 PM<br>
                 • <b>📍 Venue:</b> Open Auditorium<br><br>
-                🎟️ Ticket Price: Only Rs. 99/-`,
+                🎟️ Ticket Price: Only Rs. 79/-`,
                 img: "assets/img/events/Jhalak.png", 
                 registerLink: "https://forms.gle/e4c1MtmW88J3XxPv8" // Replace with actual form
             }
@@ -3920,6 +3920,7 @@
 
 
 })(jQuery);
+
 
 
 
