@@ -2760,7 +2760,7 @@
           links: {
             linkedin: "https://www.linkedin.com/in/tanya-gupta-a3661a327",
             instagram: "https://www.instagram.com/diz_tanya01",
-        },
+         },
         {
           name: "Shivam Choubey",
           role: "Core Member",
@@ -3919,6 +3919,7 @@
 
 
 })(jQuery);
+
 
 
 
