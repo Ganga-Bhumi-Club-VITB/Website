@@ -3646,7 +3646,7 @@
                 🎟️ Ticket Price: Only Rs. 99/-`,
                 img: "assets/img/events/Jhalak.png", 
                 registerLink: "https://forms.gle/e4c1MtmW88J3XxPv8" // Replace with actual form
-            },
+            }
             // {
             //     id: "u2",
             //     title: "Diwali Celebration Night",
@@ -3919,6 +3919,7 @@
 
 
 })(jQuery);
+
 
 
 
