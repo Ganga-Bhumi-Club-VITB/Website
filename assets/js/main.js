@@ -2754,6 +2754,14 @@
           },
         },
         {
+          name: "Tanya Gupta",
+          role: "Core Member",
+          img: "assets/img/team/evm/Tanya_24BCE11012.jpg",
+          links: {
+            linkedin: "https://www.linkedin.com/in/tanya-gupta-a3661a327",
+            instagram: "https://www.instagram.com/diz_tanya01",
+        },
+        {
           name: "Shivam Choubey",
           role: "Core Member",
           img: "https://placehold.co/220x280/ec4899/white?text=Core-Member",
@@ -3419,25 +3427,25 @@
     
     // --- START: EDIT THIS SECTION ---
     // Set the current status. Options are: "event", "recruitment", "none"
-    const currentStatus = "none"; // <-- CHANGE THIS VALUE TO TEST (e.g., "recruitment" or "none")
+    const currentStatus = "event"; // <-- CHANGE THIS VALUE TO TEST (e.g., "recruitment" or "none")
 
     // 1. Data for "event" status
     const eventsData = [
       {
-        title: "Sangam: Cultural Fest",
-        image: "assets/img/team/team-5.png", // Event poster
+        title: "Jhalak'25",
+        image: "assets/img/events/Jhalak.png", // Event poster
         url: "event.html" // Link to event page
       },
-      {
-        title: "Tech Bootcamp",
-        image: "assets/img/portfolio/portfolio-2.png",
-        url: "event.html"
-      },
-      {
-        title: "Holi Celebration",
-        image: "assets/img/team/team-8.png",
-        url: "event.html"
-      },
+      // {
+      //   title: "Tech Bootcamp",
+      //   image: "assets/img/portfolio/portfolio-2.png",
+      //   url: "event.html"
+      // },
+      // {
+      //   title: "Holi Celebration",
+      //   image: "assets/img/team/team-8.png",
+      //   url: "event.html"
+      // },
     ];
 
     // 2. Data for "recruitment" status
@@ -3617,7 +3625,7 @@
 
     // --- CONFIGURATION ---
     // Set to 'false' to display "Something great coming soon" for upcoming events
-    const showUpcomingEvents = false; 
+    const showUpcomingEvents = true; 
 
     // --- EDIT EVENTS HERE ---
     // IMPORTANT: 'id' must be unique for modal lookup
@@ -3625,31 +3633,38 @@
         upcoming: [
             {
                 id: "u1",
-                title: "Web Development Workshop",
-                date: "01 Dec 2025",
-                tag: "Technical",
-                description: "Join us for a hands-on workshop where we will dive into the fundamentals of HTML, CSS, and JavaScript. Whether you are a complete beginner or looking to refresh your skills, this session is designed to get you coding your first website in no time. Laptop required!",
-                img: "assets/img/blogs/blog-2.png", 
-                registerLink: "https://forms.gle/exampleFormLink" // Replace with actual form
+                title: "Jhalak'25",
+                date: "04 December 2025",
+                tag: "Event",
+                description: `Get ready for an electrifying fusion of raw folk roots and modern beats! The Ganga Bhumi Club presents Jhalak 25, a cultural extravaganza that is your ultimate pass to the vibrant heartlands of Uttar Pradesh, Bihar, and Jharkhand.<br><br>
+                This isn't just an event; it's a living, breathing celebration! Immerse yourself in a whirlwind of powerful dances, gripping skits, soulful music, and delicious food. From the magic of a Kavi Sammelan to the stunning colors of a traditional ramp walk, we're bringing the authentic vibe right to you.<br><br>
+                The day will culminate in a grand OPEN DJ set where you can dance your heart out to pulsating Bhojpuri hits, folk-pop fusion, and all your favorite tracks!br><br>
+                <b>Event Details:</b><br>
+                • <b>📅 Date:</b> 4th December 2025<br>
+                • <b>⏰ Time:</b> 1:20 PM - 4:20 PM<br>
+                • <b>📍 Venue:</b> Open Auditorium<br><br>
+                🎟️ Ticket Price: Only Rs. 99/-`,
+                img: "assets/img/events/Jhalak.png", 
+                registerLink: "https://forms.gle/e4c1MtmW88J3XxPv8" // Replace with actual form
             },
-            {
-                id: "u2",
-                title: "Diwali Celebration Night",
-                date: "15 Nov 2025",
-                tag: "Cultural",
-                description: "Let's celebrate the festival of lights together! An evening filled with music, dance performances, rangoli competitions, and delicious snacks. Wear your best traditional attire and join the Gangabhumi family.",
-                img: "assets/img/blogs/blog-1.png",
-                registerLink: "https://forms.gle/exampleFormLink"
-            },
-            {
-                id: "u3",
-                title: "AI & Future Tech Talk",
-                date: "10 Jan 2026",
-                tag: "Seminar",
-                description: "An insightful session featuring industry experts discussing the future of Artificial Intelligence and its impact on modern engineering. Don't miss this chance to network and learn about cutting-edge trends.",
-                img: "https://placehold.co/600x600/101010/FFF?text=AI+Tech", 
-                registerLink: "https://forms.gle/exampleFormLink"
-            }
+            // {
+            //     id: "u2",
+            //     title: "Diwali Celebration Night",
+            //     date: "15 Nov 2025",
+            //     tag: "Cultural",
+            //     description: "Let's celebrate the festival of lights together! An evening filled with music, dance performances, rangoli competitions, and delicious snacks. Wear your best traditional attire and join the Gangabhumi family.",
+            //     img: "assets/img/blogs/blog-1.png",
+            //     registerLink: "https://forms.gle/exampleFormLink"
+            // },
+            // {
+            //     id: "u3",
+            //     title: "AI & Future Tech Talk",
+            //     date: "10 Jan 2026",
+            //     tag: "Seminar",
+            //     description: "An insightful session featuring industry experts discussing the future of Artificial Intelligence and its impact on modern engineering. Don't miss this chance to network and learn about cutting-edge trends.",
+            //     img: "https://placehold.co/600x600/101010/FFF?text=AI+Tech", 
+            //     registerLink: "https://forms.gle/exampleFormLink"
+            // }
         ],
         past: [
             {
@@ -3904,5 +3919,6 @@
 
 
 })(jQuery);
+
 
 
