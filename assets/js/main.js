@@ -49,6 +49,7 @@
   | 37. DYNAMIC LATEST NEWS
   | 38. DYNAMIC EVENTS PAGE (NEW)
   | 39. GALLERY FILTER & LIGHTBOX (NEW)
+  | 40. HERO EVENT POPUP (NEW)
   */
   /*--------------------------------------------------------------
     Scripts initialization
@@ -135,6 +136,7 @@
     renderEventAlbums();
     initAlbumModal();
     imgAnimLeftShow();
+    initHeroPopup();
   });
 
   /*--------------------------------------------------------------
@@ -3917,9 +3919,86 @@
         }
     });
   }
+  /*--------------------------------------------------------------
+    41. HERO EVENT POPUP (ADDED 11/16/2025)
+  --------------------------------------------------------------*/
+  function initHeroPopup() {
+    // --- CONFIGURATION SWITCH ---
+    // Set to 'true' to enable the popup, 'false' to disable it completely.
+    const isEventActive = true; 
+    // ---------------------------
+
+    const $popupOverlay = $("#hero-popup-overlay");
+    const $closeBtn = $("#hero-popup-close");
+    
+    // Check both existence AND the active switch
+    if (!$popupOverlay.length || !isEventActive) return;
+
+    // 1. Trigger Popup after a delay (Wait for preloader)
+    // 3500ms = 3.5s (Matches typical preloader time of 2-3s)
+    setTimeout(() => {
+        $popupOverlay.addClass("active");
+        // Optional: Stop background scroll when popup opens
+        $("body").css("overflow", "hidden");
+        if(typeof lenis !== 'undefined') lenis.stop();
+    }, 3000);
+
+    // 2. Close Functionality
+    function closeHeroPopup() {
+        $popupOverlay.removeClass("active");
+        // Restore scroll
+        $("body").css("overflow", "auto");
+        if(typeof lenis !== 'undefined') lenis.start();
+    }
+
+    $closeBtn.on("click", closeHeroPopup);
+    
+    // Close on overlay click (optional, good UX)
+    $popupOverlay.on("click", function(e) {
+        if (e.target === this) {
+            closeHeroPopup();
+        }
+    });
+
+    // 3. Countdown Logic specific for this event (Dec 4, 2025)
+    const eventDate = new Date("2025-12-04T13:20:00").getTime(); // 1:20 PM
+    
+    const $days = $("#hero-days");
+    const $hours = $("#hero-hours");
+    const $mins = $("#hero-mins");
+    const $secs = $("#hero-secs");
+
+    if (!$days.length) return; // Safety check
+
+    const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance < 0) {
+            clearInterval(timer);
+            $days.text("00");
+            $hours.text("00");
+            $mins.text("00");
+            $secs.text("00");
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        $days.text(days < 10 ? "0" + days : days);
+        $hours.text(hours < 10 ? "0" + hours : hours);
+        $mins.text(minutes < 10 ? "0" + minutes : minutes);
+        $secs.text(seconds < 10 ? "0" + seconds : seconds);
+
+    }, 1000);
+  }
 
 
 })(jQuery);
+
 
 
 
