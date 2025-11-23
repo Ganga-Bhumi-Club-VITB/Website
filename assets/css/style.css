@@ -10891,4 +10891,215 @@ body.modal-open {
 /* NEW: Center the copyright text in the footer */
 .ak-footer.style-1 .copy-right-content .ak-space-between {
     justify-content: center !important;
+
+}
+
+/* |--------------------------------------------------------------------------
+   | 40. HERO EVENT POPUP (ADDED FOR HOMEPAGE LOAD)
+   |--------------------------------------------------------------------------
+*/
+.gbc-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100005; /* Highest priority */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.gbc-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gbc-hero-popup {
+    width: 100%;
+    max-width: 900px;
+    background: var(--body-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.9);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.gbc-popup-overlay.active .gbc-hero-popup {
+    transform: scale(1);
+}
+
+/* Left Side: Poster */
+.gbc-popup-img {
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    display: flex; /* Centers image if contained */
+    align-items: center;
+    justify-content: center;
+}
+
+.gbc-popup-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gbc-hero-popup:hover .gbc-popup-img img {
+    transform: scale(1.05);
+}
+
+/* Right Side: Content */
+.gbc-popup-content {
+    width: 55%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.gbc-popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--gray-bg);
+    color: var(--heading-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.gbc-popup-close:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.gbc-popup-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.gbc-popup-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--heading-color);
+    font-family: var(--heading-font-family);
+}
+
+/* Countdown Styles */
+.gbc-popup-countdown {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.gbc-timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--gray-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 70px;
+}
+
+.gbc-timer-val {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1;
+}
+
+.gbc-timer-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .gbc-hero-popup {
+        flex-direction: column;
+        max-width: 90%;
+        max-height: 85vh; /* Prevent overflowing screen height */
+        overflow-y: auto; /* Enable scrolling within modal */
+        /* Smooth scrolling for iOS */
+        -webkit-overflow-scrolling: touch; 
+    }
+    
+    /* Fix the image container */
+    .gbc-popup-img {
+        width: 100%;
+        height: auto; /* Let content define height */
+        min-height: 400px; /* Ensure it's tall enough */
+        max-height: 450px; /* Don't let it take over the whole screen */
+        flex-shrink: 0; /* Prevent shrinking */
+    }
+
+    .gbc-popup-img img {
+        /* Use 'contain' so the whole poster is visible without cropping */
+        object-fit: contain; 
+        position: relative;
+        height: 100%;
+    }
+    
+    .gbc-popup-content {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .gbc-popup-title {
+        font-size: 2.2rem;
+    }
+
+    .gbc-timer-box {
+        min-width: 60px;
+        padding: 8px;
+    }
+    
+    .gbc-timer-val {
+        font-size: 1.4rem;
+    }
+    
+    /* Adjust close button position for mobile */
+    .gbc-popup-close {
+        top: 10px;
+        right: 10px;
+        background: rgba(0,0,0,0.5); /* More contrast on image/white bg */
+        border: none;
+        color: #fff;
+    }
 }
