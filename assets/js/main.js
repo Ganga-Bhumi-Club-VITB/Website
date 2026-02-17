@@ -3960,8 +3960,8 @@
         }
     });
 
-    // 3. Countdown Logic specific for this event (Dec 4, 2025)
-    const eventDate = new Date("2025-12-04T13:20:00").getTime(); // 1:20 PM
+    // 3. Countdown Logic specific for this event (Feb 26, 2026)
+    const eventDate = new Date("2026-02-26T10:00:00").getTime(); // 1:20 PM
     
     const $days = $("#hero-days");
     const $hours = $("#hero-hours");
@@ -3998,6 +3998,7 @@
 
 
 })(jQuery);
+
 
 
 
