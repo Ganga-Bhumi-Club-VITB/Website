@@ -3435,7 +3435,7 @@
     // 1. Data for "event" status
     const eventsData = [
       {
-        title: "Jhalak'25",
+        title: "Jhalak'26",
         image: "assets/img/events/Jhalak.png", // Event poster
         url: "event.html" // Link to event page
       },
@@ -3636,10 +3636,10 @@
         upcoming: [
             {
                 id: "u1",
-                title: "Jhalak'25",
+                title: "Jhalak'26",
                 date: "04 December 2025",
                 tag: "Event",
-                description: `Get ready for an electrifying fusion of raw folk roots and modern beats! The Ganga Bhumi Club presents Jhalak 25, a cultural extravaganza that is your ultimate pass to the vibrant heartlands of Uttar Pradesh, Bihar, and Jharkhand.<br><br>
+                description: `Get ready for an electrifying fusion of raw folk roots and modern beats! The Ganga Bhumi Club presents Jhalak 26, a cultural extravaganza that is your ultimate pass to the vibrant heartlands of Uttar Pradesh, Bihar, and Jharkhand.<br><br>
                 This isn't just an event; it's a living, breathing celebration! Immerse yourself in a whirlwind of powerful dances, gripping skits, soulful music, and delicious food. From the magic of a Kavi Sammelan to the stunning colors of a traditional ramp walk, we're bringing the authentic vibe right to you.<br><br>
                 The day will culminate in a grand OPEN DJ set where you can dance your heart out to pulsating Bhojpuri hits, folk-pop fusion, and all your favorite tracks!br><br>
                 <b>Event Details:</b><br>
@@ -3998,6 +3998,7 @@
 
 
 })(jQuery);
+
 
 
 
