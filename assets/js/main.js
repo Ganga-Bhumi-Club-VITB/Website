@@ -3637,14 +3637,14 @@
             {
                 id: "u1",
                 title: "Jhalak'26",
-                date: "04 December 2025",
+                date: "26 February 2026",
                 tag: "Event",
                 description: `Get ready for an electrifying fusion of raw folk roots and modern beats! The Ganga Bhumi Club presents Jhalak 26, a cultural extravaganza that is your ultimate pass to the vibrant heartlands of Uttar Pradesh, Bihar, and Jharkhand.<br><br>
                 This isn't just an event; it's a living, breathing celebration! Immerse yourself in a whirlwind of powerful dances, gripping skits, soulful music, and delicious food. From the magic of a Kavi Sammelan to the stunning colors of a traditional ramp walk, we're bringing the authentic vibe right to you.<br><br>
                 The day will culminate in a grand OPEN DJ set where you can dance your heart out to pulsating Bhojpuri hits, folk-pop fusion, and all your favorite tracks!br><br>
                 <b>Event Details:</b><br>
-                • <b>📅 Date:</b> 4th December 2025<br>
-                • <b>⏰ Time:</b> 1:20 PM - 4:20 PM<br>
+                • <b>📅 Date:</b> 26th February 2026<br>
+                • <b>⏰ Time:</b> 10:00 AM - 14:00 PM<br>
                 • <b>📍 Venue:</b> Open Auditorium<br><br>
                 🎟️ Ticket Price: Only Rs. 79/-`,
                 img: "assets/img/events/Jhalak.png", 
@@ -3998,6 +3998,7 @@
 
 
 })(jQuery);
+
 
 
 
