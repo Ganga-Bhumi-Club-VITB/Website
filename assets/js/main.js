@@ -77,8 +77,8 @@
   const lenis = new Lenis({
     lerp: 0.07,
     prevent: (node) => {
-        // Prevent Lenis from controlling modal scroll
-        return node.closest('.event-modal-right') !== null;
+      // Prevent Lenis from controlling modal scroll
+      return node.closest('.event-modal-right') !== null;
     }
   });
 
@@ -130,7 +130,7 @@
     initDynamicEventsPage();
     initGalleryFilter(); // NEW
     initImageLightbox(); // NEW
-    renderFeaturedSlider(); 
+    renderFeaturedSlider();
     initFeaturedSlider();
     // DYNAMIC ALBUMS & MODAL
     renderEventAlbums();
@@ -145,129 +145,129 @@
   function renderFeaturedSlider() {
     const $wrapper = $(".featured-event-slider .swiper-wrapper");
     if (!$wrapper.length) {
-        return;
+      return;
     }
 
     // Data
     const featuredEvents = [
-        {
-            title: "Sangam: Cultural Fest",
-            venue: "OPEN AUDITORIUM",
-            date: "21 FEB 2025",
-            timing: "9:00AM - 12:30PM",
-            image: "assets/img/events/Sliders/Slider.jpg"
-        },
-        {
-            title: "Winter Fest Debut",
-            venue: "MAIN STAGE",
-            date: "14 DEC 2024",
-            timing: "6:00PM - 10:00PM",
-            image: "assets/img/events/Sliders/Slider1 (1).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (1).webp"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (2).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (2).webp"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (3).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (3).webp"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (4).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (4).webp"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (5).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (5).webp"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (6).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (7).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (8).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (9).jpg"
-        },
-        {
-            title: "Ram Navami Celebration",
-            venue: "TEMPLE GROUND",
-            date: "16 APR 2025",
-            timing: "8:00AM - 11:00AM",
-            image: "assets/img/events/Sliders/Slider1 (10).jpg"
-        }
-        
+      {
+        title: "Sangam: Cultural Fest",
+        venue: "OPEN AUDITORIUM",
+        date: "21 FEB 2025",
+        timing: "9:00AM - 12:30PM",
+        image: "assets/img/events/Sliders/Slider.jpg"
+      },
+      {
+        title: "Winter Fest Debut",
+        venue: "MAIN STAGE",
+        date: "14 DEC 2024",
+        timing: "6:00PM - 10:00PM",
+        image: "assets/img/events/Sliders/Slider1 (1).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (1).webp"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (2).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (2).webp"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (3).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (3).webp"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (4).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (4).webp"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (5).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (5).webp"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (6).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (7).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (8).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (9).jpg"
+      },
+      {
+        title: "Ram Navami Celebration",
+        venue: "TEMPLE GROUND",
+        date: "16 APR 2025",
+        timing: "8:00AM - 11:00AM",
+        image: "assets/img/events/Sliders/Slider1 (10).jpg"
+      }
+
     ];
 
     let html = "";
     featuredEvents.forEach(event => {
-        html += `
+      html += `
         <div class="swiper-slide">
             <div class="featured-card">
                 <img src="${event.image}" onerror="this.src='https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=1600'" alt="${event.title}">
@@ -289,10 +289,10 @@
         loop: true,
         speed: 1000,
         autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
+          delay: 1500,
+          disableOnInteraction: false,
         },
-        effect: "fade", 
+        effect: "fade",
         fadeEffect: { crossFade: true },
         pagination: {
           el: ".featured-pagination",
@@ -320,7 +320,7 @@
       count: 4,
       images: [
         "assets/img/events/RamNavmi/ramnavmi1 (1).jpg",
-        "assets/img/events/RamNavmi/ramnavmi1 (1).png", 
+        "assets/img/events/RamNavmi/ramnavmi1 (1).png",
         "assets/img/events/RamNavmi/ramnavmi1 (3).png",
         "assets/img/events/RamNavmi/ramnavmi1 (4).jpg",
         "assets/img/events/RamNavmi/ramnavmi1 (4).jpg",
@@ -370,7 +370,7 @@
       count: 10,
       images: [
         "assets/img/events/Winterfest/winterfest1 (1).jpg",
-        "assets/img/events/Winterfest/winterfest1 (2).jpg", 
+        "assets/img/events/Winterfest/winterfest1 (2).jpg",
         "assets/img/events/Winterfest/winterfest1 (3).jpg",
         "assets/img/events/Winterfest/winterfest1 (4).jpg",
         "assets/img/events/Winterfest/winterfest1 (5).jpg",
@@ -450,20 +450,20 @@
   function initAlbumModal() {
     const $modal = $(".ak-image-popup");
     const $modalContent = $(".ak-image-popup-content");
-    
-    $(document).on("click", ".album-card", function() {
-        const id = $(this).data("id");
-        const album = eventAlbumsData.find(a => a.id === id);
-        
-        if (!album) return;
 
-        // Build Slider HTML for Modal
-        let slidesHtml = "";
-        album.images.forEach(img => {
-            slidesHtml += `<div class="swiper-slide"><img src="${img}" alt="Album Image"></div>`;
-        });
+    $(document).on("click", ".album-card", function () {
+      const id = $(this).data("id");
+      const album = eventAlbumsData.find(a => a.id === id);
 
-        const modalHtml = `
+      if (!album) return;
+
+      // Build Slider HTML for Modal
+      let slidesHtml = "";
+      album.images.forEach(img => {
+        slidesHtml += `<div class="swiper-slide"><img src="${img}" alt="Album Image"></div>`;
+      });
+
+      const modalHtml = `
             <div class="ak-image-popup-close"><i class="fa-solid fa-xmark"></i></div>
             <div class="swiper album-modal-slider">
                 <div class="swiper-wrapper">${slidesHtml}</div>
@@ -474,35 +474,35 @@
             <h4 id="ak-lightbox-caption">${album.title}</h4>
         `;
 
-        $modalContent.html(modalHtml);
-        $modal.addClass("active");
-        $("body").css("overflow", "hidden");
-        if(typeof lenis !== 'undefined') lenis.stop();
+      $modalContent.html(modalHtml);
+      $modal.addClass("active");
+      $("body").css("overflow", "hidden");
+      if (typeof lenis !== 'undefined') lenis.stop();
 
-        // Init Swiper inside Modal
-        new Swiper(".album-modal-slider", {
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            zoom: true,
-        });
+      // Init Swiper inside Modal
+      new Swiper(".album-modal-slider", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        zoom: true,
+      });
     });
 
     // Close Modal Logic
-    $(document).on("click", ".ak-image-popup-close, .ak-image-popup-overlay", function() {
-        $modal.removeClass("active");
-        $("body").css("overflow", "auto");
-        if(typeof lenis !== 'undefined') lenis.start();
-        setTimeout(() => { $modalContent.html(''); }, 300); 
+    $(document).on("click", ".ak-image-popup-close, .ak-image-popup-overlay", function () {
+      $modal.removeClass("active");
+      $("body").css("overflow", "auto");
+      if (typeof lenis !== 'undefined') lenis.start();
+      setTimeout(() => { $modalContent.html(''); }, 300);
     });
   }
-  
+
 
   /*--------------------------------------------------------------
     NEW HERO COUNTER (Added 11/16/2025)
@@ -510,7 +510,7 @@
   function heroFactCounter() {
     if ($.exists(".hero-counter")) {
       const counters = gsap.utils.toArray(".hero-counter");
-      
+
       counters.forEach((counter) => {
         let goal = $(counter).data("goal");
         if (goal === undefined) return; // Skip if no data-goal
@@ -669,7 +669,7 @@
     const $header = $(".ak-sticky_header");
     // This is the point where the navbar changes.
     // 50px is usually enough to feel instant.
-    const scrollThreshold = 50; 
+    const scrollThreshold = 50;
 
     $(window).on("scroll", function () {
       const windowTop = $(window).scrollTop();
@@ -1107,10 +1107,10 @@
   function modalVideo() {
     $(document).on("click", ".ak-video-open", function (e) {
       e.preventDefault();
-      
+
       let urlString = $(this).attr("href");
       let videoId = "";
-      
+
       console.log("Clicked Video Link:", urlString);
 
       if (!urlString) return;
@@ -1122,10 +1122,10 @@
       if (match && match[2].length === 11) {
         videoId = match[2];
         console.log("Extracted Video ID:", videoId);
-        
+
         // Use standard youtube.com domain and removed 'origin' parameter which can block localhost
         const finalSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        
+
         $(".ak-video-popup-container iframe").attr("src", finalSrc);
         $(".ak-video-popup").addClass("active");
       } else {
@@ -1937,7 +1937,7 @@
       const body = $("body");
       // MODIFICATION: Changed selector to '#home-hero-section'
       const section = $("#home-hero-section");
-      
+
       // MODIFICATION: Updated paths to the new image.
       // You can set a different image for dark mode if you have one.
       if (body.hasClass("dark") === false) {
@@ -1950,7 +1950,7 @@
         section.css(
           "background-image",
           // MODIFICATION: Using the new image path from your CSS
-          'url("assets/img/bg/ram_mandir.webp")' 
+          'url("assets/img/bg/ram_mandir.webp")'
         );
       }
     }
@@ -3390,7 +3390,7 @@
     36. NEW FOUNDER MODAL (Added 11/16/2025)
   --------------------------------------------------------------*/
   // This is a new, separate modal system just for the founder cards
-  
+
   const $founderModalOverlay = $(".founder-modal-overlay");
 
   // Open Modal
@@ -3423,11 +3423,11 @@
   }
   $(".founder-modal-close, .founder-modal-overlay").on("click", closeFounderModal);
 
-    /*--------------------------------------------------------------
-    /* NEW: 37. DYNAMIC LATEST NEWS (Replaces Recent Events)
-  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  /* NEW: 37. DYNAMIC LATEST NEWS (Replaces Recent Events)
+--------------------------------------------------------------*/
   function populateLatestNews() {
-    
+
     // --- START: EDIT THIS SECTION ---
     // Set the current status. Options are: "event", "recruitment", "none"
     const currentStatus = "event"; // <-- CHANGE THIS VALUE TO TEST (e.g., "recruitment" or "none")
@@ -3435,20 +3435,10 @@
     // 1. Data for "event" status
     const eventsData = [
       {
-        title: "Jhalak'26",
-        image: "assets/img/events/Jhalak.png", // Event poster
-        url: "event.html" // Link to event page
-      },
-      // {
-      //   title: "Tech Bootcamp",
-      //   image: "assets/img/portfolio/portfolio-2.png",
-      //   url: "event.html"
-      // },
-      // {
-      //   title: "Holi Celebration",
-      //   image: "assets/img/team/team-8.png",
-      //   url: "event.html"
-      // },
+        title: "Shree Ram Navami",
+        image: "ramnavmi_banner.jpg", // Banner ka sahi naam check kar lena
+        url: "event.html"
+      }
     ];
 
     // 2. Data for "recruitment" status
@@ -3460,7 +3450,7 @@
       }
       // You can add more recruitment cards here if needed
     ];
-    
+
     // 3. Data for "none" status
     const nothingMessage = "Something great coming soon. Stay tuned!";
 
@@ -3475,13 +3465,13 @@
     let contentHtml = "";
 
     switch (currentStatus) {
-      
+
       case "event":
         // --- Remove recruitment class if it exists ---
         $container.removeClass('recruitment-mode');
         // --- Build HTML for EVENTS ---
         // --- FIX: Added ', index' to the function parameters ---
-        eventsData.forEach((item, index) => { 
+        eventsData.forEach((item, index) => {
           // --- Reverted test code: Apply animation to all items ---
           const animationClass = "img-anim-left-show";
           contentHtml += `
@@ -3558,7 +3548,7 @@
 
     // Set the container's inner HTML
     $container.html(contentHtml);
-    
+
     // We need to re-trigger the image animation function 
     // since we've added new elements.
     // Check if the function exists before calling it.
@@ -3628,18 +3618,54 @@
 
     // --- CONFIGURATION ---
     // Set to 'false' to display "Something great coming soon" for upcoming events
-    const showUpcomingEvents = true; 
+    const showUpcomingEvents = true;
 
     // --- EDIT EVENTS HERE ---
     // IMPORTANT: 'id' must be unique for modal lookup
     const eventsData = {
-        upcoming: [
-            {
-                id: "u1",
-                title: "Jhalak'26",
-                date: "26 February 2026",
-                tag: "Event",
-                description: `Get ready for an electrifying fusion of raw folk roots and modern beats! The Ganga Bhumi Club presents Jhalak 26, a cultural extravaganza that is your ultimate pass to the vibrant heartlands of Uttar Pradesh, Bihar, and Jharkhand.<br><br>
+      upcoming: [
+        {
+          id: "ram26",
+          title: "Shree Ram Navami",
+          date: "27th March 2026",
+          tag: "Cultural",
+          description: `Beyond the festivities, Ram Navami is a sacred call to awaken the 'Maryada Purushottam' within. Lord Ram’s life is the eternal blueprint for a Spiritual Warrior—one who leads with compassion, fights for truth, and lives by unwavering Dharma.<br><br>
+    This is the essence of Ram Rajya: a divine vision of a society where righteousness reigns, the weak are protected, and selfless service is the highest law. It is not just an ancient kingdom, but a state of heart we must strive to build today. As we celebrate the descent of the Divine, let us pledge to anchor our lives in his grace and integrity.<br><br>
+    <b>Event Details:</b><br>
+    • <b>📅 Date:</b> 27th March 2026<br>
+    • <b>⏰ Time:</b> 12:00 PM - 04:15 PM<br>
+    • <b>📍 Venue:</b> Open Air Auditorium (OAA)<br><br>
+    🚩 <b>Jai Shree Ram!</b> 🚩<br><br>
+    🎟️ <b>Ticket Price:</b> Only Rs. 151/-`,
+          img: "assets/img/events/ramnavmi_banner.png",
+          registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSeDq_npx_K3zfXlwZPtEP-qLVQ4vHfm12n_G8P47X_jg9w7AA/viewform" // Replace with actual form if different
+        }
+        // {
+        //     id: "u2",
+        //     title: "Diwali Celebration Night",
+        //     date: "15 Nov 2025",
+        //     tag: "Cultural",
+        //     description: "Let's celebrate the festival of lights together! An evening filled with music, dance performances, rangoli competitions, and delicious snacks. Wear your best traditional attire and join the Gangabhumi family.",
+        //     img: "assets/img/blogs/blog-1.png",
+        //     registerLink: "https://forms.gle/exampleFormLink"
+        // },
+        // {
+        //     id: "u3",
+        //     title: "AI & Future Tech Talk",
+        //     date: "10 Jan 2026",
+        //     tag: "Seminar",
+        //     description: "An insightful session featuring industry experts discussing the future of Artificial Intelligence and its impact on modern engineering. Don't miss this chance to network and learn about cutting-edge trends.",
+        //     img: "https://placehold.co/600x600/101010/FFF?text=AI+Tech", 
+        //     registerLink: "https://forms.gle/exampleFormLink"
+        // }
+      ],
+      past: [
+        {
+          id: "u1",
+          title: "Jhalak'26",
+          date: "26 February 2026",
+          tag: "Event",
+          description: `Get ready for an electrifying fusion of raw folk roots and modern beats! The Ganga Bhumi Club presents Jhalak 26, a cultural extravaganza that is your ultimate pass to the vibrant heartlands of Uttar Pradesh, Bihar, and Jharkhand.<br><br>
                 This isn't just an event; it's a living, breathing celebration! Immerse yourself in a whirlwind of powerful dances, gripping skits, soulful music, and delicious food. From the magic of a Kavi Sammelan to the stunning colors of a traditional ramp walk, we're bringing the authentic vibe right to you.<br><br>
                 The day will culminate in a grand OPEN DJ set where you can dance your heart out to pulsating Bhojpuri hits, folk-pop fusion, and all your favorite tracks!br><br>
                 <b>Event Details:</b><br>
@@ -3647,95 +3673,75 @@
                 • <b>⏰ Time:</b> 10:00 AM - 14:00 PM<br>
                 • <b>📍 Venue:</b> Open Auditorium<br><br>
                 🎟️ Ticket Price: Only Rs. 79/-`,
-                img: "assets/img/events/Jhalak.png", 
-                registerLink: "https://forms.gle/e4c1MtmW88J3XxPv8" // Replace with actual form
-            }
-            // {
-            //     id: "u2",
-            //     title: "Diwali Celebration Night",
-            //     date: "15 Nov 2025",
-            //     tag: "Cultural",
-            //     description: "Let's celebrate the festival of lights together! An evening filled with music, dance performances, rangoli competitions, and delicious snacks. Wear your best traditional attire and join the Gangabhumi family.",
-            //     img: "assets/img/blogs/blog-1.png",
-            //     registerLink: "https://forms.gle/exampleFormLink"
-            // },
-            // {
-            //     id: "u3",
-            //     title: "AI & Future Tech Talk",
-            //     date: "10 Jan 2026",
-            //     tag: "Seminar",
-            //     description: "An insightful session featuring industry experts discussing the future of Artificial Intelligence and its impact on modern engineering. Don't miss this chance to network and learn about cutting-edge trends.",
-            //     img: "https://placehold.co/600x600/101010/FFF?text=AI+Tech", 
-            //     registerLink: "https://forms.gle/exampleFormLink"
-            // }
-        ],
-        past: [
-            {
-                id: "p3",
-                title: "Ram Navami & Gudi Padwa",
-                date: "16 Apr 2025",
-                tag: "Event",
-                description: `In a beautiful demonstration of cultural unity, the Ganga Bhumi Club and the Marathi Club collaborated to host a joint celebration of Ram Navami and Gudi Padwa.<br><br>
+          img: "assets/img/events/Jhalak.png",
+          registerLink: "https://forms.gle/e4c1MtmW88J3XxPv8" // Replace with actual form
+        },
+        {
+          id: "p3",
+          title: "Ram Navami & Gudi Padwa",
+          date: "16 Apr 2025",
+          tag: "Event",
+          description: `In a beautiful demonstration of cultural unity, the Ganga Bhumi Club and the Marathi Club collaborated to host a joint celebration of Ram Navami and Gudi Padwa.<br><br>
                 The centerpiece was the sacred arrival and installation of an idol of Lord Ram inside the campus, establishing a powerful atmosphere of devotion.<br><br>
                 <b>The celebration featured a fusion of cultural traditions:</b><br>
                 • <b>Spiritual Offerings:</b> Devotees participated in soul-stirring Bhajans and Kirtans dedicated to Lord Ram and Mata Sita.<br>
                 • <b>Ramayana Skits:</b> Engaging dramatic skits brought key moments from the Ramayana to life, focusing on the virtues and life of Lord Ram and Mata Sita.<br>
                 • <b>Cultural Fusion:</b> The event beautifully incorporated the traditions of both Ram Navami and the Marathi New Year.<br><br>
                 This successful collaboration was a vibrant expression of shared heritage.`,
-                img: "assets/img/events/RAM NAVAMI & GUDI PADWA.png",
-                galleryLink: "gallery.html"
-            },
-            {
-                id: "p2",
-                title: "Sangam - Advitya 2025",
-                date: "21 Feb 2025",
-                tag: "Event",
-                description: `The Ganga Bhumi Club successfully hosted Sangam at Advitya 2025, a rich, day-long celebration of culture and community. The event commenced early, setting a traditional tone with Ganesh Vandana and a heartfelt Ganga Aarti.<br><br>
+          img: "assets/img/events/RAM NAVAMI & GUDI PADWA.png",
+          galleryLink: "gallery.html"
+        },
+        {
+          id: "p2",
+          title: "Sangam - Advitya 2025",
+          date: "21 Feb 2025",
+          tag: "Event",
+          description: `The Ganga Bhumi Club successfully hosted Sangam at Advitya 2025, a rich, day-long celebration of culture and community. The event commenced early, setting a traditional tone with Ganesh Vandana and a heartfelt Ganga Aarti.<br><br>
                 The centerpiece was the moving and iconic skit on Chhath Puja. This powerful segment beautifully embraced the significance of the festival, celebrating the profound devotion, sacrifices, and unity that define this Mahaparv.<br><br>
                 The cultural energy peaked with performances including captivating Hip-Hop, Kathak, Jhijhiya, Bollywood dances, and live music, concluding with an electrifying open DJ performance.`,
-                img: "assets/img/events/sangam.jpg",
-                galleryLink: "gallery.html"
-            },
-            {
-                id: "p1",
-                title: "Debut at Winter Fest",
-                date: "14 Dec 2024",
-                tag: "Event",
-                description: `The Ganga Bhumi Club made a vibrant and unforgettable debut at the Winter Fest, marking its grand arrival at VIT Bhopal. In its inaugural stage performance, the club brought the rich cultures of Uttar Pradesh, Bihar, and Jharkhand to life.<br><br>
+          img: "assets/img/events/sangam.jpg",
+          galleryLink: "gallery.html"
+        },
+        {
+          id: "p1",
+          title: "Debut at Winter Fest",
+          date: "14 Dec 2024",
+          tag: "Event",
+          description: `The Ganga Bhumi Club made a vibrant and unforgettable debut at the Winter Fest, marking its grand arrival at VIT Bhopal. In its inaugural stage performance, the club brought the rich cultures of Uttar Pradesh, Bihar, and Jharkhand to life.<br><br>
                 The audience was captivated by a dynamic showcase featuring energetic folk dances, an elegant cultural ramp walk, and a soulful flute performance. This successful event was more than just a show; it was a powerful introduction to our mission.`,
-                img: "assets/img/events/winterfest.jpeg",
-                galleryLink: "gallery.html"
-            }
-        ]
+          img: "assets/img/events/winterfest.jpeg",
+          galleryLink: "gallery.html"
+        }
+      ]
     };
 
     // Function to render the grid items
     function renderEvents(type) {
-        let events = eventsData[type] || [];
-        
-        // --- SWITCH LOGIC ---
-        // If type is upcoming AND switch is false, force empty array
-        if (type === 'upcoming' && !showUpcomingEvents) {
-            events = [];
-        }
+      let events = eventsData[type] || [];
 
-        let html = "";
+      // --- SWITCH LOGIC ---
+      // If type is upcoming AND switch is false, force empty array
+      if (type === 'upcoming' && !showUpcomingEvents) {
+        events = [];
+      }
 
-        if (events.length === 0) {
-            // Determine message based on type
-            const msg = type === 'upcoming' 
-                ? "Something great coming soon. Stay tuned!" 
-                : "No past events found.";
+      let html = "";
 
-            html = `
+      if (events.length === 0) {
+        // Determine message based on type
+        const msg = type === 'upcoming'
+          ? "Something great coming soon. Stay tuned!"
+          : "No past events found.";
+
+        html = `
                 <div class="no-events-message">
                     <h3>${msg}</h3>
                 </div>
             `;
-        } else {
-            events.forEach(event => {
-                // We store ID and Type in data attributes for the click handler
-                html += `
+      } else {
+        events.forEach(event => {
+          // We store ID and Type in data attributes for the click handler
+          html += `
                 <div class="event-poster-card" data-id="${event.id}" data-type="${type}">
                     <img src="${event.img}" alt="${event.title}">
                     <div class="event-poster-overlay">
@@ -3743,99 +3749,99 @@
                     </div>
                 </div>
                 `;
-            });
-        }
+        });
+      }
 
-        $container.html(html);
+      $container.html(html);
     }
 
     // Initial Render
     renderEvents("upcoming");
 
     // Tab Click Handler
-    $tabs.on("click", function() {
-        const target = $(this).data("tab");
-        
-        $tabs.removeClass("active");
-        $(this).addClass("active");
+    $tabs.on("click", function () {
+      const target = $(this).data("tab");
 
-        $container.css("opacity", "0");
-        setTimeout(() => {
-            renderEvents(target);
-            $container.css("opacity", "1");
-        }, 300);
+      $tabs.removeClass("active");
+      $(this).addClass("active");
+
+      $container.css("opacity", "0");
+      setTimeout(() => {
+        renderEvents(target);
+        $container.css("opacity", "1");
+      }, 300);
     });
 
     // --- EVENT MODAL LOGIC ---
-    
+
     function openEventModal(eventId, eventType) {
-        const event = eventsData[eventType].find(e => e.id === eventId);
-        if(!event) return;
+      const event = eventsData[eventType].find(e => e.id === eventId);
+      if (!event) return;
 
-        // Populate content
-        $("#modal-event-image").attr("src", event.img);
-        $("#modal-event-title").text(event.title);
-        $("#modal-event-tag").text(event.tag);
-        $("#modal-event-date").html(`<i class="fa-regular fa-calendar" style="margin-right:5px;"></i> ${event.date}`);
-        $("#modal-event-desc").html(event.description);
+      // Populate content
+      $("#modal-event-image").attr("src", event.img);
+      $("#modal-event-title").text(event.title);
+      $("#modal-event-tag").text(event.tag);
+      $("#modal-event-date").html(`<i class="fa-regular fa-calendar" style="margin-right:5px;"></i> ${event.date}`);
+      $("#modal-event-desc").html(event.description);
 
-        const $btnRight = $("#modal-action-btn");
-        const $btnLeft = $("#modal-action-btn-left"); 
-        let btnText, btnLink, btnTarget;
-        
-        if (eventType === "upcoming") {
-            btnText = "Register Now";
-            btnLink = event.registerLink || "#";
-            btnTarget = "_blank";
-        } else {
-            btnText = "View Photos";
-            btnLink = event.galleryLink || "gallery.html";
-            btnTarget = "_self";
-        }
+      const $btnRight = $("#modal-action-btn");
+      const $btnLeft = $("#modal-action-btn-left");
+      let btnText, btnLink, btnTarget;
 
-        $btnRight.text(btnText).attr("href", btnLink).attr("target", btnTarget);
-        $btnLeft.text(btnText).attr("href", btnLink).attr("target", btnTarget);
+      if (eventType === "upcoming") {
+        btnText = "Register Now";
+        btnLink = event.registerLink || "#";
+        btnTarget = "_blank";
+      } else {
+        btnText = "View Photos";
+        btnLink = event.galleryLink || "gallery.html";
+        btnTarget = "_self";
+      }
 
-        // Reset scroll to top
-        $(".event-modal-right").scrollTop(0);
+      $btnRight.text(btnText).attr("href", btnLink).attr("target", btnTarget);
+      $btnLeft.text(btnText).attr("href", btnLink).attr("target", btnTarget);
 
-        // Show modal
-        $overlay.addClass("active");
-        $modal.addClass("active");
-        $("body").addClass("modal-open");
+      // Reset scroll to top
+      $(".event-modal-right").scrollTop(0);
 
-        // CRITICAL FIX: Stop Lenis completely and unlock the modal
-        if (typeof lenis !== "undefined") {
-            lenis.stop();
-            
-            // IMPORTANT: Tell Lenis to ignore the modal content
-            setTimeout(() => {
-                const $modalRight = $(".event-modal-right")[0];
-                if ($modalRight) {
-                    // Remove Lenis control from this element
-                    $modalRight.style.overflow = "auto";
-                    $modalRight.style.overflowY = "auto";
-                }
-            }, 100);
-        }
+      // Show modal
+      $overlay.addClass("active");
+      $modal.addClass("active");
+      $("body").addClass("modal-open");
+
+      // CRITICAL FIX: Stop Lenis completely and unlock the modal
+      if (typeof lenis !== "undefined") {
+        lenis.stop();
+
+        // IMPORTANT: Tell Lenis to ignore the modal content
+        setTimeout(() => {
+          const $modalRight = $(".event-modal-right")[0];
+          if ($modalRight) {
+            // Remove Lenis control from this element
+            $modalRight.style.overflow = "auto";
+            $modalRight.style.overflowY = "auto";
+          }
+        }, 100);
+      }
     }
 
     function closeEventModal() {
-        $overlay.removeClass("active");
-        $modal.removeClass("active");
-        $("body").removeClass("modal-open");
-        
-        // Restore page scroll
-        if (typeof lenis !== "undefined") {
-            lenis.start();
-        }
+      $overlay.removeClass("active");
+      $modal.removeClass("active");
+      $("body").removeClass("modal-open");
+
+      // Restore page scroll
+      if (typeof lenis !== "undefined") {
+        lenis.start();
+      }
     }
 
     // Event Delegation for Grid Items (since they are dynamic)
-    $container.on("click", ".event-poster-card", function() {
-        const id = $(this).data("id");
-        const type = $(this).data("type");
-        openEventModal(id, type);
+    $container.on("click", ".event-poster-card", function () {
+      const id = $(this).data("id");
+      const type = $(this).data("type");
+      openEventModal(id, type);
     });
 
     // Close Handlers
@@ -3852,30 +3858,30 @@
     const $filterBtns = $(".gallery-filter-btn");
     const $items = $(".gallery-item");
 
-    $filterBtns.on("click", function() {
-        // Active class handling
-        $filterBtns.removeClass("active");
-        $(this).addClass("active");
+    $filterBtns.on("click", function () {
+      // Active class handling
+      $filterBtns.removeClass("active");
+      $(this).addClass("active");
 
-        const filterValue = $(this).data("filter");
+      const filterValue = $(this).data("filter");
 
-        // Filtering logic
-        $items.each(function() {
-            const $item = $(this);
-            
-            if (filterValue === "all") {
-                $item.removeClass("hidden");
-                // Trigger animation
-                gsap.fromTo($item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
-            } else {
-                if ($item.hasClass(filterValue)) {
-                    $item.removeClass("hidden");
-                    gsap.fromTo($item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
-                } else {
-                    $item.addClass("hidden");
-                }
-            }
-        });
+      // Filtering logic
+      $items.each(function () {
+        const $item = $(this);
+
+        if (filterValue === "all") {
+          $item.removeClass("hidden");
+          // Trigger animation
+          gsap.fromTo($item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
+        } else {
+          if ($item.hasClass(filterValue)) {
+            $item.removeClass("hidden");
+            gsap.fromTo($item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 });
+          } else {
+            $item.addClass("hidden");
+          }
+        }
+      });
     });
   }
 
@@ -3891,32 +3897,32 @@
     const $closeBtn = $(".ak-image-popup-close, .ak-image-popup-overlay");
 
     // Open Lightbox
-    $(document).on("click", ".gallery-item", function() {
-        const src = $(this).find("img").attr("src");
-        const title = $(this).find(".gallery-text h4").text();
-        
-        $imgBox.attr("src", src);
-        $caption.text(title);
-        
-        $popup.addClass("active");
-        $("body").css("overflow", "hidden"); // Prevent background scroll
-        if(typeof lenis !== 'undefined') lenis.stop();
+    $(document).on("click", ".gallery-item", function () {
+      const src = $(this).find("img").attr("src");
+      const title = $(this).find(".gallery-text h4").text();
+
+      $imgBox.attr("src", src);
+      $caption.text(title);
+
+      $popup.addClass("active");
+      $("body").css("overflow", "hidden"); // Prevent background scroll
+      if (typeof lenis !== 'undefined') lenis.stop();
     });
 
     // Close Lightbox
-    $closeBtn.on("click", function() {
-        $popup.removeClass("active");
-        $("body").css("overflow", "auto");
-        if(typeof lenis !== 'undefined') lenis.start();
+    $closeBtn.on("click", function () {
+      $popup.removeClass("active");
+      $("body").css("overflow", "auto");
+      if (typeof lenis !== 'undefined') lenis.start();
     });
 
     // Close on ESC key
-    $(document).on("keydown", function(e) {
-        if (e.key === "Escape" && $popup.hasClass("active")) {
-            $popup.removeClass("active");
-            $("body").css("overflow", "auto");
-            if(typeof lenis !== 'undefined') lenis.start();
-        }
+    $(document).on("keydown", function (e) {
+      if (e.key === "Escape" && $popup.hasClass("active")) {
+        $popup.removeClass("active");
+        $("body").css("overflow", "auto");
+        if (typeof lenis !== 'undefined') lenis.start();
+      }
     });
   }
   /*--------------------------------------------------------------
@@ -3925,44 +3931,44 @@
   function initHeroPopup() {
     // --- CONFIGURATION SWITCH ---
     // Set to 'true' to enable the popup, 'false' to disable it completely.
-    const isEventActive = true; 
+    const isEventActive = true;
     // ---------------------------
 
     const $popupOverlay = $("#hero-popup-overlay");
     const $closeBtn = $("#hero-popup-close");
-    
+
     // Check both existence AND the active switch
     if (!$popupOverlay.length || !isEventActive) return;
 
     // 1. Trigger Popup after a delay (Wait for preloader)
     // 3500ms = 3.5s (Matches typical preloader time of 2-3s)
     setTimeout(() => {
-        $popupOverlay.addClass("active");
-        // Optional: Stop background scroll when popup opens
-        $("body").css("overflow", "hidden");
-        if(typeof lenis !== 'undefined') lenis.stop();
+      $popupOverlay.addClass("active");
+      // Optional: Stop background scroll when popup opens
+      $("body").css("overflow", "hidden");
+      if (typeof lenis !== 'undefined') lenis.stop();
     }, 3000);
 
     // 2. Close Functionality
     function closeHeroPopup() {
-        $popupOverlay.removeClass("active");
-        // Restore scroll
-        $("body").css("overflow", "auto");
-        if(typeof lenis !== 'undefined') lenis.start();
+      $popupOverlay.removeClass("active");
+      // Restore scroll
+      $("body").css("overflow", "auto");
+      if (typeof lenis !== 'undefined') lenis.start();
     }
 
     $closeBtn.on("click", closeHeroPopup);
-    
+
     // Close on overlay click (optional, good UX)
-    $popupOverlay.on("click", function(e) {
-        if (e.target === this) {
-            closeHeroPopup();
-        }
+    $popupOverlay.on("click", function (e) {
+      if (e.target === this) {
+        closeHeroPopup();
+      }
     });
 
     // 3. Countdown Logic specific for this event (Feb 26, 2026)
-    const eventDate = new Date("2026-02-26T10:00:00").getTime(); // 1:20 PM
-    
+    const eventDate = new Date("2026-03-27T12:00:00").getTime(); // 1:20 PM
+
     const $days = $("#hero-days");
     const $hours = $("#hero-hours");
     const $mins = $("#hero-mins");
@@ -3971,27 +3977,27 @@
     if (!$days.length) return; // Safety check
 
     const timer = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+      const now = new Date().getTime();
+      const distance = eventDate - now;
 
-        if (distance < 0) {
-            clearInterval(timer);
-            $days.text("00");
-            $hours.text("00");
-            $mins.text("00");
-            $secs.text("00");
-            return;
-        }
+      if (distance < 0) {
+        clearInterval(timer);
+        $days.text("00");
+        $hours.text("00");
+        $mins.text("00");
+        $secs.text("00");
+        return;
+      }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        $days.text(days < 10 ? "0" + days : days);
-        $hours.text(hours < 10 ? "0" + hours : hours);
-        $mins.text(minutes < 10 ? "0" + minutes : minutes);
-        $secs.text(seconds < 10 ? "0" + seconds : seconds);
+      $days.text(days < 10 ? "0" + days : days);
+      $hours.text(hours < 10 ? "0" + hours : hours);
+      $mins.text(minutes < 10 ? "0" + minutes : minutes);
+      $secs.text(seconds < 10 ? "0" + seconds : seconds);
 
     }, 1000);
   }
